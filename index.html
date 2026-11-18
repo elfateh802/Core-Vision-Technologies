@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Core Vision Technologies | كاميرات مراقبة وشبكات وبرامج للشركات</title>
+<meta name="description" content="كور فيجن تكنولوجيز: تركيب كاميرات المراقبة، تأسيس شبكات الشركات، وبرامج الكاشير والمخازن. معاينة مجانية. المهندسين، الجيزة.">
+<meta property="og:title" content="Core Vision Technologies">
+<meta property="og:description" content="كاميرات مراقبة، شبكات، وبرامج للمحلات والشركات. معاينة مجانية لأي عميل جديد.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a1630">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 8 12v18c0 15 10 26 24 30 14-4 24-15 24-30V12L32 4Z' fill='%230a1630' stroke='%232f8cff' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%232f8cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Cairo:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* Layout: navy brand bands (hero, why, numbers, footer) alternating with light content sections; bilingual EN/AR with full RTL. */
+:root{
+  --navy:#0a1630; --navy-2:#0f2147; --blue:#1667e6; --blue-bright:#2f8cff; --ice:#e8f0fc;
+  --bg:#f5f8fd; --surface:#ffffff; --fg:#0d1a33; --muted:#53627d; --line:#d9e2f0;
+  --on-navy:#eaf1ff; --on-navy-muted:#9db0d3;
+  --f-display:"Saira","Cairo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  --f-mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,Menlo,monospace;
+  --wrap:1180px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#081124; --surface:#0e1b37; --fg:#e6eefc; --muted:#9aabc9; --line:#1f3157; --ice:#13254a; --blue:#3b86ff;
+  color-scheme:dark}}
+
+/* language switching */
+html:not([data-lang="ar"]) .ar{display:none!important}
+html[data-lang="ar"] .en{display:none!important}
+html[data-lang="ar"]{--f-display:"Cairo",system-ui,sans-serif;--f-body:"IBM Plex Sans Arabic",system-ui,Tahoma,sans-serif;--f-mono:"IBM Plex Sans Arabic",system-ui,sans-serif}
+html[data-lang="ar"] body *{letter-spacing:0!important}
+html[data-lang="ar"] h1,html[data-lang="ar"] h2{line-height:1.3}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+[hidden]{display:none!important}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body)}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue-bright);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+h2 em{font-style:normal;color:var(--blue)}
+.eyebrow{font:500 .75rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:10px}
+html[data-lang="ar"] .eyebrow{font-size:.9rem;font-weight:600}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+section{padding-block:clamp(64px,9vw,112px)}
+.head{display:grid;gap:16px;margin-bottom:48px}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;direction:ltr}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font:800 1.15rem/1 "Saira",sans-serif;letter-spacing:.04em}
+.brand b span{color:var(--blue-bright)}
+.brand small{display:block;font:500 .56rem/1 "IBM Plex Sans",sans-serif;letter-spacing:.32em!important;color:var(--on-navy-muted);margin-top:4px}
+.links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;color:var(--on-navy);font-size:.9rem;font-weight:500;opacity:.85}
+.links a:hover{opacity:1;color:var(--blue-bright)}
+.nav-end{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .9rem/1 var(--f-body);padding:13px 22px;border-radius:6px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--blue-bright);color:#fff}
+.btn-primary:hover{background:#1f78f0;transform:translateY(-1px)}
+.btn-ghost{border-color:rgba(255,255,255,.3);color:#fff;background:transparent}
+.btn-ghost:hover{border-color:#fff}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#1ebe5a;transform:translateY(-1px)}
+.btn-line{border-color:var(--line);color:var(--fg);background:var(--surface)}
+.btn-line:hover{border-color:var(--blue);color:var(--blue)}
+.lang-btn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:9px 14px;font:600 .9rem/1 "IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;cursor:pointer}
+.lang-btn:hover{border-color:var(--blue-bright);color:var(--blue-bright)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:6px;padding:9px 12px;font:600 .85rem var(--f-body);cursor:pointer}
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:calc(68px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;gap:0;background:var(--navy);padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
+  .links.open{display:flex}
+  .links a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .menu-btn{display:block}
+  .nav .cta-nav{display:none}
+}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 10%,#163a7a 0%,transparent 60%),linear-gradient(160deg,var(--navy) 0%,#07101f 100%);color:var(--on-navy);overflow:hidden;padding-block:clamp(72px,10vw,128px) clamp(56px,7vw,88px)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.005em}
+html[data-lang="ar"] .hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem)}
+.hero h1 .hl{display:block;color:var(--blue-bright)}
+.hero p{color:var(--on-navy-muted);font-size:1.12rem;max-width:52ch;margin:22px 0 32px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.tag{font:500 .78rem/1.4 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:20px}
+html[data-lang="ar"] .tag{font-size:1rem;font-weight:600}
+.offer{display:inline-flex;align-items:center;gap:10px;background:rgba(37,211,102,.14);border:1px solid rgba(37,211,102,.45);color:#8ff3b5;border-radius:999px;padding:8px 16px;font:600 .9rem/1.2 var(--f-body);margin-bottom:20px}
+.offer::before{content:"";width:8px;height:8px;border-radius:50%;background:#25d366;box-shadow:0 0 0 4px rgba(37,211,102,.25)}
+.trust{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--on-navy);font-size:.92rem}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust svg{width:18px;height:18px;color:#25d366}
+.emblem{justify-self:center;width:min(100%,380px);aspect-ratio:1;max-width:100%}
+.pillars{position:relative;display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(15,33,71,.6)}
+.pillars div{display:flex;align-items:center;gap:12px;padding:20px 22px;font:700 .9rem var(--f-display);letter-spacing:.1em;text-transform:uppercase}
+html[data-lang="ar"] .pillars div{font-size:1.05rem}
+.pillars div+div{border-inline-start:1px solid rgba(255,255,255,.1)}
+.pillars svg{width:26px;height:26px;color:var(--blue-bright);flex:none}
+@media (max-width:860px){.hero .grid{grid-template-columns:1fr}.emblem{width:220px;order:-1;justify-self:start}.pillars{grid-template-columns:1fr 1fr}.pillars div:nth-child(3){border-inline-start:0}.pillars div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}}
+
+/* ABOUT */
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about p{color:var(--muted);margin:0 0 16px;max-width:58ch}
+.mvv{display:grid;gap:0;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mvv>div{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:24px}
+.mvv>div+div{border-top:1px solid var(--line)}
+.mvv h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.mvv p{margin:0;font-size:.95rem}
+.ico{width:48px;height:48px;border-radius:10px;background:var(--ice);color:var(--blue);display:grid;place-items:center}
+.ico svg{width:24px;height:24px}
+@media (max-width:860px){.about .grid{grid-template-columns:1fr;gap:36px}}
+
+/* SERVICES & SOLUTIONS */
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.card{background:var(--bg);padding:30px 28px;display:grid;gap:12px;align-content:start;min-width:0;transition:background .2s}
+.card:hover{background:var(--ice)}
+.card h3{font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+.sol{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sol article{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px;display:grid;gap:12px;overflow:hidden;min-width:0}
+.sol article::after{content:"";position:absolute;inset-inline-end:-40px;top:-40px;width:120px;height:120px;border-radius:50%;border:1px solid var(--line)}
+.sol .code{font:500 .7rem/1 "IBM Plex Mono",monospace;letter-spacing:.12em;color:var(--muted)}
+.sol h3{font-size:1.25rem;text-transform:uppercase}
+.sol p{margin:0;color:var(--muted);font-size:.95rem}
+.sol ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.sol li{font-size:.75rem;font-weight:600;color:var(--blue);background:var(--ice);border-radius:99px;padding:4px 10px}
+html[data-lang="ar"] .sol li{font-size:.82rem}
+@media (max-width:900px){.sol{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sol{grid-template-columns:1fr}}
+
+/* PACKAGES */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;margin-top:8px}
+.pk article{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:32px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pk article.feat{border:2px solid var(--blue);background:var(--surface);box-shadow:0 18px 40px rgba(22,103,230,.14)}
+.pk .badge{position:absolute;top:-14px;inset-inline-start:24px;background:var(--blue);color:#fff;font:600 .8rem/1 var(--f-body);padding:7px 12px;border-radius:99px}
+.pk h3{font-size:1.4rem;text-transform:uppercase}
+.pk .for{margin:0;color:var(--muted);font-size:.92rem}
+.pk ul{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:10px;align-content:start;flex:1}
+.pk li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:.95rem}
+.pk li svg{width:20px;height:20px;color:var(--blue);margin-top:2px}
+.pk .btn{justify-content:center;margin-top:8px}
+.maint{margin-top:28px;display:grid;grid-template-columns:48px 1fr auto;gap:18px;align-items:center;padding:22px 26px;border-radius:12px;background:var(--ice);border:1px solid var(--line)}
+.maint h3{font-size:1.1rem;text-transform:uppercase;margin-bottom:4px}
+.maint p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.pk{grid-template-columns:1fr;max-width:540px}.maint{grid-template-columns:1fr}}
+
+/* WHY */
+.why{background:linear-gradient(160deg,var(--navy-2),var(--navy));color:var(--on-navy)}
+.why h2 em{color:var(--blue-bright)}
+.why .eyebrow{color:var(--blue-bright)}
+.why-list{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px}
+.why-list>div{display:grid;grid-template-columns:28px 1fr;gap:14px}
+.why-list svg{width:28px;height:28px;color:var(--blue-bright)}
+.why-list h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.why-list p{margin:0;color:var(--on-navy-muted);font-size:.95rem}
+@media (max-width:900px){.why-list{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.why-list{grid-template-columns:1fr}}
+
+/* PROJECTS */
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sector{position:relative;border-radius:10px;overflow:hidden;min-height:180px;display:flex;align-items:flex-end;padding:20px;color:#fff;background:var(--navy-2)}
+.sector svg.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.sector>div{position:relative;display:grid;gap:4px}
+.sector h3{font-size:1.1rem;text-transform:uppercase;letter-spacing:.06em}
+.sector p{margin:0;font-size:.85rem;color:var(--on-navy-muted)}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.sectors{grid-template-columns:1fr}}
+
+/* PARTNERS */
+.partners{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--line);gap:1px}
+.partners span{background:var(--bg);display:grid;place-items:center;padding:28px 12px;font:800 1.15rem/1 "Saira",sans-serif;letter-spacing:.04em!important;text-transform:uppercase;color:var(--fg);opacity:.8;transition:opacity .2s,color .2s}
+.partners span:hover{opacity:1;color:var(--blue)}
+@media (max-width:760px){.partners{grid-template-columns:repeat(2,1fr)}}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;padding:0;margin:0}
+.steps li{list-style:none;position:relative;padding-inline-end:14px;display:grid;gap:10px;align-content:start}
+.steps .n{font:800 1rem/1 "Saira",sans-serif;color:#fff;background:var(--blue);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 0 0 6px var(--bg)}
+.steps li:not(:last-child)::before{content:"";position:absolute;top:22px;inset-inline-start:44px;inset-inline-end:0;height:2px;background:linear-gradient(to right,var(--blue),var(--line))}
+[dir="rtl"] .steps li:not(:last-child)::before{background:linear-gradient(to left,var(--blue),var(--line))}
+.steps h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em}
+.steps p{margin:0;color:var(--muted);font-size:.9rem}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr 1fr;row-gap:36px}.steps li::before{display:none}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.steps li{grid-template-columns:44px 1fr;column-gap:16px}.steps li>*:not(.n){grid-column:2}.steps .n{grid-row:span 2}}
+
+/* NUMBERS */
+.numbers{background:var(--navy);color:#fff;padding-block:56px}
+.numbers .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.numbers .wrap>div{display:grid;gap:6px;padding:8px 24px}
+.numbers .wrap>div+div{border-inline-start:1px solid rgba(255,255,255,.12)}
+.numbers b{font:800 clamp(2.4rem,5vw,3.6rem)/1 "Saira",sans-serif;font-variant-numeric:tabular-nums;direction:ltr;justify-self:start}
+.numbers b i{font-style:normal;color:var(--blue-bright)}
+.numbers .lbl{font:500 .75rem/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-muted)}
+html[data-lang="ar"] .numbers .lbl{font-size:.95rem}
+@media (max-width:760px){.numbers .wrap{grid-template-columns:1fr 1fr;row-gap:28px}.numbers .wrap>div:nth-child(3){border-inline-start:0}}
+
+/* FAQ */
+.faq{display:grid;gap:12px;max-width:820px}
+.faq details{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:700 1.4rem/1 var(--f-display);color:var(--blue)}
+.faq details[open] summary::after{content:"\2013"}
+.faq p{margin:0 0 18px;color:var(--muted)}
+
+/* CONTACT */
+.contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.info{display:grid;gap:14px;margin-top:28px}
+.info>div{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.info .ico{width:44px;height:44px}
+.info small{display:block;font:500 .7rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+html[data-lang="ar"] .info small{font-size:.85rem}
+.info strong{font-weight:600;word-break:break-word}
+.copy{font:600 .75rem var(--f-body);color:var(--blue);background:none;border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer;text-decoration:none}
+.ico.wa{background:#e3f8ea;color:#1a9e4b}
+.wa-link{color:#1a9e4b;border-color:#bfe9cf}
+form{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:32px;display:grid;gap:16px;grid-template-columns:1fr 1fr}
+form .full{grid-column:1/-1}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:600}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%}
+input[type=tel],input[type=email]{direction:ltr}
+[dir="rtl"] input[type=tel],[dir="rtl"] input[type=email]{text-align:right}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:0;border-color:transparent}
+.ok{grid-column:1/-1;margin:0;padding:12px 14px;border-radius:6px;background:var(--ice);color:var(--blue);font-weight:600;font-size:.9rem}
+.ok span{display:block}
+.ok .btn{margin-top:12px}
+button[disabled]{opacity:.6;cursor:wait}
+@media (max-width:860px){.contact .grid{grid-template-columns:1fr}form{grid-template-columns:1fr;padding:22px}}
+
+footer{background:#060d1c;color:var(--on-navy-muted);padding-block:40px;font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.wa-float{position:fixed;z-index:70;bottom:calc(20px + env(safe-area-inset-bottom,0px));inset-inline-end:max(20px,env(safe-area-inset-right,0px));display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font:600 .95rem/1 var(--f-body);padding:14px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .15s}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float svg{width:24px;height:24px;flex:none}
+@media (max-width:560px){.wa-float .t{display:none}.wa-float{padding:14px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <path d="M32 4 8 12v18c0 15 10 26 24 30 14-4 24-15 24-30V12L32 4Z" fill="none" stroke="#2f8cff" stroke-width="3"/>
+      <path d="M18 32c4-7 9-10 14-10s10 3 14 10c-4 7-9 10-14 10s-10-3-14-10Z" fill="#0f2147" stroke="#fff" stroke-width="2"/>
+      <circle cx="32" cy="32" r="6.5" fill="#2f8cff"/><circle cx="32" cy="32" r="2.6" fill="#0a1630"/><circle cx="34" cy="30" r="1.2" fill="#fff"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.2 3.1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a4.5 4.5 0 0 1-2.3-2.3l.8-1-1-2Z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m7.5 12.3 3 3 6-6.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Core Vision Technologies">
+      <svg><use href="#logo"/></svg>
+      <span><b>CORE <span>VISION</span></b><small>TECHNOLOGIES</small></span>
+    </a>
+    <ul class="links" id="links">
+      <li><a href="#about"><span class="en">About</span><span class="ar">من نحن</span></a></li>
+      <li><a href="#services"><span class="en">Services</span><span class="ar">خدماتنا</span></a></li>
+      <li><a href="#solutions"><span class="en">Solutions</span><span class="ar">حلولنا</span></a></li>
+      <li><a href="#packages"><span class="en">Packages</span><span class="ar">الباقات</span></a></li>
+      <li><a href="#projects"><span class="en">Projects</span><span class="ar">مشروعاتنا</span></a></li>
+      <li><a href="#faq"><span class="en">FAQ</span><span class="ar">أسئلة شائعة</span></a></li>
+      <li><a href="#contact"><span class="en">Contact</span><span class="ar">تواصل معنا</span></a></li>
+    </ul>
+    <div class="nav-end">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language"><span class="en" lang="ar">عربي</span><span class="ar" lang="en">English</span></button>
+      <a class="btn btn-primary cta-nav" href="#contact"><span class="en">Get a quote</span><span class="ar">اطلب عرض سعر</span></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="links"><span class="en">Menu</span><span class="ar">القائمة</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="offer"><span class="en">Free site survey for every new client</span><span class="ar">معاينة مجانية لأي عميل جديد</span></div>
+        <div class="tag"><span class="en">Advanced Security &amp; Network Solutions</span><span class="ar">حلول متقدمة للأنظمة الأمنية والشبكات</span></div>
+        <h1><span class="en">Secure Today, <span class="hl">Connected Tomorrow</span></span><span class="ar">أمان اليوم، <span class="hl">واتصال الغد</span></span></h1>
+        <p><span class="en">We design, supply, install and maintain the surveillance, access control and network systems that protect your people, assets and data across Egypt.</span><span class="ar">نصمم ونورّد ونركّب ونصون أنظمة المراقبة والتحكم في الدخول والشبكات التي تحمي موظفيك وممتلكاتك وبياناتك في جميع أنحاء مصر.</span></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact"><span class="en">Book a free site survey</span><span class="ar">احجز معاينة مجانية</span></a>
+          <a class="btn btn-wa" href="https://wa.me/201098693153" target="_blank" rel="noopener" data-wa-en="Hi Core Vision, I'd like to book a free site survey." data-wa-ar="مرحبًا كور فيجن، عايز أحجز معاينة مجانية."><svg><use href="#i-wa"/></svg><span class="en">Chat on WhatsApp</span><span class="ar">كلمنا واتساب</span></a>
+          <a class="btn btn-ghost" href="#packages"><span class="en">See packages</span><span class="ar">شوف الباقات</span></a>
+        </div>
+        <ul class="trust">
+          <li><svg><use href="#i-check"/></svg><span class="en">Free, no-obligation survey</span><span class="ar">معاينة مجانية بدون التزام</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="en">1-year installation warranty</span><span class="ar">ضمان سنة على التركيب</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="en">Quote within 24 hours</span><span class="ar">عرض سعر خلال 24 ساعة</span></li>
+        </ul>
+      </div>
+      <svg class="emblem" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <radialGradient id="eg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2f8cff" stop-opacity=".35"/><stop offset="1" stop-color="#2f8cff" stop-opacity="0"/></radialGradient>
+          <radialGradient id="iris" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#7fb8ff"/><stop offset=".55" stop-color="#1667e6"/><stop offset="1" stop-color="#0a2b66"/></radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="url(#eg)"/>
+        <path d="M200 40 70 84v94c0 80 54 140 130 162 76-22 130-82 130-162V84L200 40Z" fill="#0a1630" fill-opacity=".7" stroke="#2f8cff" stroke-width="6"/>
+        <path d="M200 66 94 102v76c0 66 44 115 106 134" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="2"/>
+        <circle cx="200" cy="196" r="78" fill="none" stroke="#fff" stroke-width="10"/>
+        <circle cx="200" cy="196" r="62" fill="url(#iris)"/>
+        <circle cx="200" cy="196" r="26" fill="#07101f"/>
+        <circle cx="214" cy="182" r="8" fill="#fff" fill-opacity=".9"/>
+        <g stroke="#2f8cff" stroke-width="2" fill="#0a1630">
+          <path d="M290 150 322 132M322 132 344 160M322 132 330 104M290 236 330 250M330 250 350 228" fill="none"/>
+          <circle cx="322" cy="132" r="6"/><circle cx="344" cy="160" r="5"/><circle cx="330" cy="104" r="5"/><circle cx="330" cy="250" r="6"/><circle cx="350" cy="228" r="5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="pillars">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9.5 4.6-1.1 8-4.5 8-9.5V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span class="en">Security</span><span class="ar">الأمان</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg><span class="en">Innovation</span><span class="ar">الابتكار</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="en">Reliability</span><span class="ar">الاعتمادية</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l3 6-9 12L3 9l3-6Z"/><path d="M3 9h18M9 3l3 18 3-18"/></svg><span class="en">Integrity</span><span class="ar">النزاهة</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div>
+      <div class="head"><div class="eyebrow"><span class="en">About us</span><span class="ar">من نحن</span></div><h2><span class="en">Who <em>we are</em></span><span class="ar">تعرّف <em>علينا</em></span></h2></div>
+      <p><span class="en">Core Vision Technologies is a leading provider of advanced security and network solutions for businesses across many industries.</span><span class="ar">كور فيجن تكنولوجيز شركة رائدة في تقديم الحلول الأمنية وحلول الشبكات المتقدمة للشركات في مختلف القطاعات.</span></p>
+      <p><span class="en">We design, supply, install and maintain reliable systems that protect people, assets and data while keeping your connectivity fast and stable.</span><span class="ar">نصمم ونورّد ونركّب ونصون أنظمة موثوقة تحمي الأفراد والممتلكات والبيانات، مع اتصال سريع ومستقر.</span></p>
+      <p><span class="en">Our mission is to deliver smart, scalable and cost-effective solutions built on quality, innovation and trust.</span><span class="ar">مهمتنا تقديم حلول ذكية قابلة للتوسع وبتكلفة مناسبة، قائمة على الجودة والابتكار والثقة.</span></p>
+    </div>
+    <div class="mvv">
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span><div><h3><span class="en">Our mission</span><span class="ar">رسالتنا</span></h3><p><span class="en">Deliver advanced solutions that ensure security and reliability for every client we serve.</span><span class="ar">تقديم حلول متقدمة تضمن الأمان والاعتمادية لكل عميل نخدمه.</span></p></div></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span><div><h3><span class="en">Our vision</span><span class="ar">رؤيتنا</span></h3><p><span class="en">To be the most trusted security and network solutions partner in the region.</span><span class="ar">أن نكون الشريك الأكثر ثقة في الحلول الأمنية وحلول الشبكات في المنطقة.</span></p></div></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l3 6-9 12L3 9l3-6Z"/><path d="M3 9h18"/></svg></span><div><h3><span class="en">Our values</span><span class="ar">قيمنا</span></h3><p><span class="en">Quality, integrity, innovation and customer satisfaction in every project.</span><span class="ar">الجودة والنزاهة والابتكار ورضا العملاء في كل مشروع.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="services">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">What we do</span><span class="ar">ماذا نقدم</span></div><h2><span class="en">Our <em>services</em></span><span class="ar"><em>خدماتنا</em></span></h2><p class="lede"><span class="en">End-to-end services that cover every stage of your project, from the first site visit to years of support after handover.</span><span class="ar">خدمات متكاملة تغطي كل مراحل مشروعك، من أول زيارة للموقع حتى سنوات من الدعم بعد التسليم.</span></p></div>
+    <div class="cards">
+      <div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><h3><span class="en">Consultation</span><span class="ar">الاستشارات</span></h3><p><span class="en">We analyze your site and risks, then recommend the right solution for your needs and budget.</span><span class="ar">ندرس موقعك والمخاطر المحتملة، ونرشح لك الحل المناسب لاحتياجاتك وميزانيتك.</span></p></div>
+      <div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span><h3><span class="en">Design &amp; Engineering</span><span class="ar">التصميم والهندسة</span></h3><p><span class="en">Tailored system designs, drawings and BOQs that meet industry standards.</span><span class="ar">تصميمات ورسومات وجداول كميات مخصصة لكل مشروع وفق المعايير المعتمدة.</span></p></div>
+      <div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><h3><span class="en">Supply</span><span class="ar">التوريد</span></h3><p><span class="en">High-quality, certified equipment from trusted global brands.</span><span class="ar">معدات معتمدة عالية الجودة من أشهر العلامات التجارية العالمية.</span></p></div>
+      <div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8Z"/></svg></span><h3><span class="en">Installation</span><span class="ar">التركيب</span></h3><p><span class="en">Professional installation by certified technicians, clean cabling and labeling.</span><span class="ar">تركيب احترافي على يد فنيين معتمدين، مع تمديدات منظمة وترقيم واضح.</span></p></div>
+      <div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6L4 19a1.5 1.5 0 0 0 1.3 2h13.4A1.5 1.5 0 0 0 20 19l-6-10V3"/></svg></span><h3><span class="en">Testing &amp; Commissioning</span><span class="ar">الاختبار والتشغيل</span></h3><p><span class="en">Rigorous testing to make sure every system runs at full performance.</span><span class="ar">اختبارات دقيقة للتأكد من عمل كل نظام بأعلى كفاءة.</span></p></div>
+      <div class="card"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3ZM3 19a2 2 0 0 0 2 2h1v-6H3Z"/></svg></span><h3><span class="en">Maintenance &amp; Support</span><span class="ar">الصيانة والدعم</span></h3><p><span class="en">Preventive maintenance and fast support to keep your systems running smoothly.</span><span class="ar">صيانة دورية ودعم فني سريع لضمان استمرار عمل أنظمتك دون توقف.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">Integrated systems</span><span class="ar">أنظمة متكاملة</span></div><h2><span class="en">Our <em>solutions</em></span><span class="ar"><em>حلولنا</em></span></h2><p class="lede"><span class="en">Integrated systems that meet the highest standards of security and connectivity.</span><span class="ar">أنظمة متكاملة تلبي أعلى معايير الأمان والاتصال.</span></p></div>
+    <div class="sol">
+      <article><span class="code">SOL / 01</span><h3><span class="en">CCTV &amp; IP Surveillance</span><span class="ar">كاميرات المراقبة</span></h3><p><span class="en">High-definition surveillance with remote viewing and smart video analytics.</span><span class="ar">مراقبة بجودة عالية مع إمكانية المشاهدة عن بُعد وتحليل الفيديو الذكي.</span></p><ul><li><span class="en">IP cameras</span><span class="ar">كاميرات IP</span></li><li><span class="en">NVR / VMS</span><span class="ar">أجهزة التسجيل</span></li><li><span class="en">Analytics</span><span class="ar">التحليل الذكي</span></li></ul></article>
+      <article><span class="code">SOL / 02</span><h3><span class="en">Access Control</span><span class="ar">التحكم في الدخول</span></h3><p><span class="en">Smart systems to manage and secure entry to your buildings and rooms.</span><span class="ar">أنظمة ذكية لإدارة وتأمين الدخول إلى المباني والغرف.</span></p><ul><li><span class="en">Card &amp; biometric</span><span class="ar">كارت وبصمة</span></li><li><span class="en">Time attendance</span><span class="ar">الحضور والانصراف</span></li><li><span class="en">Turnstiles</span><span class="ar">بوابات الدخول</span></li></ul></article>
+      <article><span class="code">SOL / 03</span><h3><span class="en">Network Infrastructure</span><span class="ar">البنية التحتية للشبكات</span></h3><p><span class="en">Reliable network design and deployment for seamless connectivity.</span><span class="ar">تصميم وتنفيذ شبكات موثوقة لاتصال سلس دون انقطاع.</span></p><ul><li><span class="en">Switching</span><span class="ar">السويتشات</span></li><li><span class="en">Wi-Fi</span><span class="ar">الواي فاي</span></li><li><span class="en">Firewalls</span><span class="ar">جدران الحماية</span></li></ul></article>
+      <article><span class="code">SOL / 04</span><h3><span class="en">Structured Cabling</span><span class="ar">الكابلات المنظمة</span></h3><p><span class="en">Professional copper and fiber cabling for voice, data and video.</span><span class="ar">تمديدات نحاسية وألياف ضوئية احترافية للصوت والبيانات والفيديو.</span></p><ul><li>Cat6 / Cat6A</li><li><span class="en">Fiber optic</span><span class="ar">فايبر</span></li><li><span class="en">Racks</span><span class="ar">الكبائن</span></li></ul></article>
+      <article><span class="code">SOL / 05</span><h3><span class="en">Fire Alarm Systems</span><span class="ar">أنظمة إنذار الحريق</span></h3><p><span class="en">Early detection and reliable fire alarm solutions for safer buildings.</span><span class="ar">اكتشاف مبكر وأنظمة إنذار حريق موثوقة لمبانٍ أكثر أمانًا.</span></p><ul><li><span class="en">Addressable</span><span class="ar">معنون</span></li><li><span class="en">Conventional</span><span class="ar">تقليدي</span></li><li><span class="en">Detectors</span><span class="ar">الكواشف</span></li></ul></article>
+      <article><span class="code">SOL / 06</span><h3><span class="en">Intercom &amp; Public Address</span><span class="ar">الإنتركم والإذاعة الداخلية</span></h3><p><span class="en">Clear communication for daily operations, safety and emergencies.</span><span class="ar">اتصال واضح للعمل اليومي وللسلامة وحالات الطوارئ.</span></p><ul><li><span class="en">Video intercom</span><span class="ar">إنتركم بالفيديو</span></li><li><span class="en">PA / BGM</span><span class="ar">إذاعة وموسيقى خلفية</span></li><li><span class="en">Paging</span><span class="ar">النداء</span></li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="packages">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">Ready packages</span><span class="ar">باقات جاهزة</span></div><h2><span class="en">Pick your <em>package</em></span><span class="ar">اختار <em>باقتك</em></span></h2><p class="lede"><span class="en">One price covers equipment, installation, setup and training. Prices depend on brands and site size, so message us and get your quote within 24 hours.</span><span class="ar">سعر واحد يشمل الأجهزة والتركيب والتشغيل والتدريب. السعر يعتمد على الماركات ومساحة المكان، ابعتلنا وهيوصلك عرض السعر خلال 24 ساعة.</span></p></div>
+    <div class="pk">
+      <article>
+        <h3><span class="en">Shop</span><span class="ar">باقة المحل</span></h3>
+        <p class="for"><span class="en">Shops, pharmacies and cafés</span><span class="ar">المحلات والصيدليات والكافيهات</span></p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">4 HD cameras + recorder</span><span class="ar">4 كاميرات عالية الجودة + جهاز تسجيل</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Live view from your phone</span><span class="ar">مشاهدة مباشرة من الموبايل</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Router + full Wi-Fi coverage</span><span class="ar">راوتر + تغطية واي فاي كاملة</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">POS &amp; inventory software</span><span class="ar">برنامج كاشير ومخازن</span></span></li>
+        </ul>
+        <a class="btn btn-line" href="https://wa.me/201098693153" target="_blank" rel="noopener" data-wa-en="Hi Core Vision, I'd like a price for the Shop package." data-wa-ar="مرحبًا كور فيجن، عايز سعر باقة المحل."><span class="en">Ask for price</span><span class="ar">اسأل عن السعر</span></a>
+      </article>
+      <article class="feat">
+        <span class="badge"><span class="en">Best for most businesses</span><span class="ar">الأنسب لمعظم الشركات</span></span>
+        <h3><span class="en">Company</span><span class="ar">باقة الشركة</span></h3>
+        <p class="for"><span class="en">Offices and clinics, up to 15 devices</span><span class="ar">المكاتب والعيادات، حتى 15 جهاز</span></p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Structured network, up to 15 points</span><span class="ar">شبكة منظمة حتى 15 نقطة</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Switch + 2 Wi-Fi access points</span><span class="ar">سويتش + 2 نقطة واي فاي</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Separate staff and guest networks</span><span class="ar">فصل شبكة الموظفين عن الزوار</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">8 cameras + NVR</span><span class="ar">8 كاميرات + جهاز تسجيل NVR</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Sales, inventory &amp; reports software</span><span class="ar">برنامج مبيعات ومخازن وتقارير</span></span></li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/201098693153" target="_blank" rel="noopener" data-wa-en="Hi Core Vision, I'd like a price for the Company package." data-wa-ar="مرحبًا كور فيجن، عايز سعر باقة الشركة."><svg><use href="#i-wa"/></svg><span class="en">Ask for price on WhatsApp</span><span class="ar">اسأل عن السعر واتساب</span></a>
+      </article>
+      <article>
+        <h3><span class="en">Integrated</span><span class="ar">الباقة المتكاملة</span></h3>
+        <p class="for"><span class="en">Factories, warehouses and multi-branch</span><span class="ar">المصانع والمخازن والفروع المتعددة</span></p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Design after a site survey</span><span class="ar">تصميم بعد معاينة الموقع</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Full rack + fiber backbone</span><span class="ar">راك كامل + شبكة فايبر</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">16+ cameras</span><span class="ar">16 كاميرا أو أكثر</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Access control &amp; attendance</span><span class="ar">تحكم في الدخول وحضور وانصراف</span></span></li>
+          <li><svg><use href="#i-check"/></svg><span><span class="en">Custom business software</span><span class="ar">برنامج مخصص لنشاطك</span></span></li>
+        </ul>
+        <a class="btn btn-line" href="https://wa.me/201098693153" target="_blank" rel="noopener" data-wa-en="Hi Core Vision, I'd like a site survey for the Integrated package." data-wa-ar="مرحبًا كور فيجن، عايز معاينة للباقة المتكاملة."><span class="en">Book a survey</span><span class="ar">احجز معاينة</span></a>
+      </article>
+    </div>
+    <div class="maint">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8Z"/></svg></span>
+      <div><h3><span class="en">Monthly maintenance contracts</span><span class="ar">عقود صيانة شهرية</span></h3><p><span class="en">First month free with any package. Scheduled visits, fast response and remote support, so your systems never stop.</span><span class="ar">أول شهر مجانًا مع أي باقة. زيارات دورية واستجابة سريعة ودعم عن بُعد، عشان شغلك ما يقفش.</span></p></div>
+      <a class="btn btn-primary" href="https://wa.me/201098693153" target="_blank" rel="noopener" data-wa-en="Hi Core Vision, I'd like to know about maintenance contracts." data-wa-ar="مرحبًا كور فيجن، عايز أعرف تفاصيل عقود الصيانة."><span class="en">Ask about maintenance</span><span class="ar">اسأل عن الصيانة</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">Why us</span><span class="ar">لماذا نحن</span></div><h2><span class="en">Why <em>choose us</em></span><span class="ar">لماذا <em>تختارنا</em></span></h2></div>
+    <div class="why-list">
+      <div><svg><use href="#i-check"/></svg><div><h3><span class="en">Experienced team</span><span class="ar">فريق ذو خبرة</span></h3><p><span class="en">Skilled professionals with years of industry experience.</span><span class="ar">متخصصون أكفاء بخبرة سنوات في المجال.</span></p></div></div>
+      <div><svg><use href="#i-check"/></svg><div><h3><span class="en">Quality products</span><span class="ar">منتجات عالية الجودة</span></h3><p><span class="en">Reliable, certified products from leading brands.</span><span class="ar">منتجات معتمدة وموثوقة من أفضل العلامات التجارية.</span></p></div></div>
+      <div><svg><use href="#i-check"/></svg><div><h3><span class="en">Customized solutions</span><span class="ar">حلول مخصصة</span></h3><p><span class="en">Every system is tailored to your specific needs and budget.</span><span class="ar">كل نظام مصمم خصيصًا حسب احتياجاتك وميزانيتك.</span></p></div></div>
+      <div><svg><use href="#i-check"/></svg><div><h3><span class="en">Competitive pricing</span><span class="ar">أسعار تنافسية</span></h3><p><span class="en">High-quality solutions at fair, transparent prices.</span><span class="ar">حلول عالية الجودة بأسعار عادلة وواضحة.</span></p></div></div>
+      <div><svg><use href="#i-check"/></svg><div><h3><span class="en">Reliable support</span><span class="ar">دعم يمكن الاعتماد عليه</span></h3><p><span class="en">Dedicated support and maintenance after installation.</span><span class="ar">دعم وصيانة مستمرة بعد التركيب.</span></p></div></div>
+      <div><svg><use href="#i-check"/></svg><div><h3><span class="en">On-time delivery</span><span class="ar">التسليم في الموعد</span></h3><p><span class="en">We value your time and deliver projects on schedule.</span><span class="ar">نقدّر وقتك ونسلّم المشروعات في مواعيدها.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">Sectors we serve</span><span class="ar">القطاعات التي نخدمها</span></div><h2><span class="en">Our <em>projects</em></span><span class="ar"><em>مشروعاتنا</em></span></h2><p class="lede"><span class="en">We deliver successful projects for businesses of all sizes.</span><span class="ar">ننفذ مشروعات ناجحة لشركات ومؤسسات من كل الأحجام.</span></p></div>
+    <div class="sectors" id="sectors"></div>
+  </div>
+</section>
+
+<section class="alt" id="partners">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">Technology partners</span><span class="ar">شركاء التكنولوجيا</span></div><h2><span class="en">Our <em>partners</em></span><span class="ar"><em>شركاؤنا</em></span></h2><p class="lede"><span class="en">We work with leading global brands to deliver the best solutions to our clients.</span><span class="ar">نتعاون مع كبرى العلامات التجارية العالمية لنقدم أفضل الحلول لعملائنا.</span></p></div>
+    <div class="partners">
+      <span>Hikvision</span><span>Dahua</span><span>Uniview</span><span>TP-Link</span><span>ZKTeco</span>
+      <span>CommScope</span><span>Schneider</span><span>Honeywell</span><span>Bosch</span><span>Panduit</span>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">How we work</span><span class="ar">طريقة عملنا</span></div><h2><span class="en">Our <em>process</em></span><span class="ar">مراحل <em>العمل</em></span></h2><p class="lede"><span class="en">A proven process that keeps every project on track, from the first meeting to ongoing support.</span><span class="ar">منهجية مجرّبة تحافظ على سير كل مشروع كما هو مخطط، من أول اجتماع حتى الدعم المستمر.</span></p></div>
+    <ol class="steps">
+      <li><span class="n">01</span><h3><span class="en">Requirement analysis</span><span class="ar">دراسة المتطلبات</span></h3><p><span class="en">We understand your needs and objectives.</span><span class="ar">نتعرف على احتياجاتك وأهدافك.</span></p></li>
+      <li><span class="n">02</span><h3><span class="en">Solution design</span><span class="ar">تصميم الحل</span></h3><p><span class="en">We design the best solution for your requirements.</span><span class="ar">نصمم الحل الأنسب لمتطلباتك.</span></p></li>
+      <li><span class="n">03</span><h3><span class="en">Planning &amp; approval</span><span class="ar">التخطيط والاعتماد</span></h3><p><span class="en">We plan the project and get your approval.</span><span class="ar">نخطط للمشروع ونحصل على موافقتك.</span></p></li>
+      <li><span class="n">04</span><h3><span class="en">Installation</span><span class="ar">التركيب</span></h3><p><span class="en">Our team installs the system with precision.</span><span class="ar">يقوم فريقنا بتركيب النظام بدقة.</span></p></li>
+      <li><span class="n">05</span><h3><span class="en">Testing &amp; training</span><span class="ar">الاختبار والتدريب</span></h3><p><span class="en">We test everything and train your users.</span><span class="ar">نختبر كل شيء وندرّب فريقك على الاستخدام.</span></p></li>
+      <li><span class="n">06</span><h3><span class="en">Support &amp; maintenance</span><span class="ar">الدعم والصيانة</span></h3><p><span class="en">Ongoing support after handover.</span><span class="ar">دعم مستمر بعد التسليم.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="numbers">
+  <div class="wrap">
+    <div><b>100<i>+</i></b><span class="lbl"><span class="en">Projects completed</span><span class="ar">مشروع منفّذ</span></span></div>
+    <div><b>80<i>+</i></b><span class="lbl"><span class="en">Satisfied clients</span><span class="ar">عميل راضٍ</span></span></div>
+    <div><b>50<i>+</i></b><span class="lbl"><span class="en">Business partners</span><span class="ar">شريك أعمال</span></span></div>
+    <div><b>24<i>/</i>7</b><span class="lbl"><span class="en">Support available</span><span class="ar">دعم فني على مدار الساعة</span></span></div>
+  </div>
+</div>
+
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow"><span class="en">FAQ</span><span class="ar">أسئلة شائعة</span></div><h2><span class="en">Common <em>questions</em></span><span class="ar">أسئلة <em>شائعة</em></span></h2></div>
+    <div class="faq">
+      <details><summary><span class="en">Is the site survey really free?</span><span class="ar">هل المعاينة مجانية فعلًا؟</span></summary><p><span class="en">Yes. We visit, check your network and camera needs, and send a written quote with no obligation.</span><span class="ar">أيوه. بنزورك ونفحص الشبكة واحتياجات الكاميرات، ونبعتلك عرض سعر مكتوب بدون أي التزام.</span></p></details>
+      <details><summary><span class="en">How long does installation take?</span><span class="ar">التركيب بياخد وقت قد إيه؟</span></summary><p><span class="en">Most offices and clinics are done within about a week of approval.</span><span class="ar">أغلب المكاتب والعيادات بنخلصها في حوالي أسبوع من الموافقة.</span></p></details>
+      <details><summary><span class="en">Can I watch the cameras from my phone?</span><span class="ar">أقدر أتابع الكاميرات من الموبايل؟</span></summary><p><span class="en">Yes. We set up live view and playback on your phone and show you how to use it.</span><span class="ar">أيوه. بنظبطلك المشاهدة المباشرة والتسجيلات على موبايلك ونعلّمك تستخدمها.</span></p></details>
+      <details><summary><span class="en">What if something breaks?</span><span class="ar">لو حاجة عطلت أعمل إيه؟</span></summary><p><span class="en">Installation has a 1-year warranty, and our monthly maintenance contracts give you a fixed response time.</span><span class="ar">التركيب عليه ضمان سنة، وعقود الصيانة الشهرية بتضمنلك وقت استجابة محدد.</span></p></details>
+      <details><summary><span class="en">Do you build software for shops?</span><span class="ar">بتعملوا برامج للمحلات؟</span></summary><p><span class="en">Yes. POS, inventory and sales reports, tailored to how your business works.</span><span class="ar">أيوه. برامج كاشير ومخازن وتقارير مبيعات، مصممة على طريقة شغلك.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <div class="head" style="margin-bottom:0"><div class="eyebrow"><span class="en">Get in touch</span><span class="ar">تواصل معنا</span></div><h2><span class="en">Let's secure <em>your world</em></span><span class="ar">لنؤمّن <em>عالمك</em></span></h2><p class="lede"><span class="en">Tell us about your site and we'll get back to you with a recommendation and a quote.</span><span class="ar">أخبرنا عن موقعك، وسنتواصل معك بالحل المقترح وعرض السعر.</span></p></div>
+      <div class="info">
+        <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></span><span><small><span class="en">Phone</span><span class="ar">الهاتف</span></small><strong class="ltr"><a href="tel:+201098693153" style="text-decoration:none">+20 10 9869 3153</a></strong></span><a class="copy" href="tel:+201098693153"><span class="en">Call</span><span class="ar">اتصل</span></a></div>
+        <div><span class="ico wa"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><strong class="ltr">+20 10 9869 3153</strong></span><a class="copy wa-link" href="https://wa.me/201098693153" target="_blank" rel="noopener"><span class="en">Chat</span><span class="ar">راسلنا</span></a></div>
+        <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span><small><span class="en">Email</span><span class="ar">البريد الإلكتروني</span></small><strong class="ltr">info@corevision-tech.com</strong></span><a class="copy" href="mailto:info@corevision-tech.com"><span class="en">Email</span><span class="ar">راسلنا</span></a></div>
+        <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small><span class="en">Office</span><span class="ar">العنوان</span></small><strong><span class="en">25 Hazem El-Batouty St., next to Mahmoud Hospital, Mohandessin, Giza</span><span class="ar">25 شارع حازم البطوطي، بجوار مستشفى محمود، المهندسين، الجيزة</span></strong></span><a class="copy" href="https://www.google.com/maps/search/?api=1&amp;query=25+Hazem+El+Batouty+St+Mohandessin+Giza" target="_blank" rel="noopener"><span class="en">Map</span><span class="ar">الخريطة</span></a></div>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <label for="f-name"><span><span class="en">Full name</span><span class="ar">الاسم بالكامل</span></span><input id="f-name" name="name" required data-ph-en="Your name" data-ph-ar="اسمك"></label>
+      <label for="f-company"><span><span class="en">Company</span><span class="ar">الشركة</span></span><input id="f-company" name="company" data-ph-en="Company name" data-ph-ar="اسم الشركة"></label>
+      <label for="f-phone"><span><span class="en">Phone</span><span class="ar">رقم الهاتف</span></span><input id="f-phone" name="phone" type="tel" required placeholder="+20 1x xxxx xxxx"></label>
+      <label for="f-email"><span><span class="en">Email</span><span class="ar">البريد الإلكتروني</span></span><input id="f-email" name="email" type="email" placeholder="you@company.com"></label>
+      <label class="full" for="f-sol"><span><span class="en">Solution needed</span><span class="ar">الحل المطلوب</span></span>
+        <select id="f-sol" name="solution">
+          <option data-en="CCTV &amp; IP Surveillance" data-ar="كاميرات المراقبة">CCTV &amp; IP Surveillance</option>
+          <option data-en="Network Infrastructure" data-ar="البنية التحتية للشبكات">Network Infrastructure</option>
+          <option data-en="POS &amp; business software" data-ar="برامج كاشير ومخازن">POS &amp; business software</option>
+          <option data-en="Shop package" data-ar="باقة المحل">Shop package</option>
+          <option data-en="Company package" data-ar="باقة الشركة">Company package</option>
+          <option data-en="Access Control" data-ar="التحكم في الدخول">Access Control</option>
+          <option data-en="Structured Cabling" data-ar="الكابلات المنظمة">Structured Cabling</option>
+          <option data-en="Fire Alarm Systems" data-ar="أنظمة إنذار الحريق">Fire Alarm Systems</option>
+          <option data-en="Intercom &amp; Public Address" data-ar="الإنتركم والإذاعة الداخلية">Intercom &amp; Public Address</option>
+          <option data-en="Maintenance contract" data-ar="عقد صيانة">Maintenance contract</option>
+          <option data-en="Not sure yet" data-ar="لم أحدد بعد">Not sure yet</option>
+        </select>
+      </label>
+      <label class="full" for="f-msg"><span><span class="en">Project details</span><span class="ar">تفاصيل المشروع</span></span><textarea id="f-msg" name="details" data-ph-en="Site type, size, number of cameras or points, timeline…" data-ph-ar="نوع الموقع، المساحة، عدد الكاميرات أو النقاط، الموعد المطلوب…"></textarea></label>
+      <div class="full"><button class="btn btn-primary" id="sendBtn" type="submit"><span class="en">Send request</span><span class="ar">إرسال الطلب</span></button></div>
+      <p class="ok" id="ok" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<a class="wa-float" href="https://wa.me/201098693153" target="_blank" rel="noopener" aria-label="WhatsApp" data-wa-en="Hi Core Vision, I have a question." data-wa-ar="مرحبًا كور فيجن، عندي استفسار."><svg><use href="#i-wa"/></svg><span class="t"><span class="en">Chat on WhatsApp</span><span class="ar">كلمنا واتساب</span></span></a>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg><use href="#logo"/></svg><span><b>CORE <span>VISION</span></b><small>TECHNOLOGIES</small></span></a>
+    <span><span class="en">25 Hazem El-Batouty St., Mohandessin, Giza</span><span class="ar">25 شارع حازم البطوطي، المهندسين، الجيزة</span></span>
+    <span><span class="en">© 2026 Core Vision Technologies. All rights reserved.</span><span class="ar">© 2026 كور فيجن تكنولوجيز. جميع الحقوق محفوظة.</span></span>
+  </div>
+</footer>
+
+<script>
+/* ===== SETTINGS =====
+   WhatsApp number that receives requests (international format, digits only).
+   FORMSPREE_ID: create a free form at https://formspree.io and paste its ID (e.g. "xyzabcde").
+   While it is empty, requests go through WhatsApp only. */
+const WA_NUMBER = '201098693153';
+const FORMSPREE_ID = '';
+/* ==================== */
+
+const WA = 'https://wa.me/' + WA_NUMBER;
+const root = document.documentElement;
+const isAr = () => root.dataset.lang === 'ar';
+
+// language
+function setLang(l){
+  root.dataset.lang = l; root.lang = l; root.dir = l === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-ph-en]').forEach(el => el.placeholder = el.dataset['ph' + (l === 'ar' ? 'Ar' : 'En')]);
+  document.querySelectorAll('option[data-en]').forEach(o => o.textContent = o.dataset[l]);
+  document.querySelectorAll('[data-wa-en]').forEach(a => a.href = WA + '?text=' + encodeURIComponent(a.dataset[l === 'ar' ? 'waAr' : 'waEn']));
+  document.getElementById('ok').hidden = true;
+  try { localStorage.setItem('cv-lang', l); } catch (e) {}
+}
+let start = 'ar';
+try { start = localStorage.getItem('cv-lang') || 'ar'; } catch (e) {}
+setLang(start);
+document.getElementById('langBtn').addEventListener('click', () => setLang(isAr() ? 'en' : 'ar'));
+
+// mobile menu
+const mb = document.getElementById('menuBtn'), ln = document.getElementById('links');
+mb.addEventListener('click', () => { const o = ln.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+ln.addEventListener('click', e => { if (e.target.closest('a')) { ln.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); } });
+
+// sector tiles with drawn building silhouettes
+const sectors = [
+ ['Corporate offices','Surveillance, access control and LAN for office towers','المباني الإدارية','مراقبة وتحكم في الدخول وشبكات للأبراج الإدارية',[[20,40,60,140],[90,20,50,160],[150,60,70,120],[230,35,45,145]]],
+ ['Retail stores','Loss prevention CCTV and people counting','المحلات التجارية','كاميرات للحد من الفاقد وعدّ الزوار',[[20,90,260,90],[40,70,220,20]]],
+ ['Warehouses','Wide-area coverage, perimeter and fire alarm','المخازن','تغطية للمساحات الواسعة والأسوار وإنذار الحريق',[[20,80,140,100],[170,95,110,85]]],
+ ['Schools & universities','Campus networks, PA and safe entry','المدارس والجامعات','شبكات الحرم والإذاعة الداخلية وتأمين الدخول',[[30,70,240,110],[120,40,60,30]]],
+ ['Hospitals','Nurse call intercom, CCTV and structured cabling','المستشفيات','نداء التمريض والكاميرات والكابلات المنظمة',[[30,50,110,130],[150,80,120,100]]],
+ ['Industrial facilities','Rugged cameras, fiber backbones and fire safety','المنشآت الصناعية','كاميرات للبيئات الصعبة وشبكات فايبر وأنظمة الحريق',[[20,100,120,80],[150,70,40,110],[200,40,22,140],[235,90,45,90]]]
+];
+const host = document.getElementById('sectors');
+sectors.forEach(([t,d,ta,da,b],k) => {
+  const blocks = b.map(([x,y,w,h]) => {
+    let win = ''; for (let yy = y+12; yy < y+h-10; yy += 16) for (let xx = x+8; xx < x+w-8; xx += 14) win += `<rect x="${xx}" y="${yy}" width="6" height="8" fill="#2f8cff" opacity="${((Math.sin(xx*yy)+1)/2*.6+.15).toFixed(2)}"/>`;
+    return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#13295a" stroke="#2f8cff" stroke-opacity=".5"/>${win}`; }).join('');
+  host.insertAdjacentHTML('beforeend', `<div class="sector"><svg class="bg" viewBox="0 0 300 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><linearGradient id="sg${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2147"/><stop offset="1" stop-color="#07101f"/></linearGradient></defs><rect width="300" height="180" fill="url(#sg${k})"/>${blocks}<rect width="300" height="180" fill="url(#sg${k})" opacity=".35"/></svg><div><h3><span class="en">${t}</span><span class="ar">${ta}</span></h3><p><span class="en">${d}</span><span class="ar">${da}</span></p></div></div>`);
+});
+
+// hero network canvas
+(function(){
+  const c = document.getElementById('net'), x = c.getContext('2d'); let w, h, pts = [];
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){ const r = c.getBoundingClientRect(), d = devicePixelRatio || 1; w = r.width; h = r.height; c.width = w*d; c.height = h*d; x.setTransform(d,0,0,d,0,0);
+    const n = Math.round(w*h/18000); pts = Array.from({length:n}, () => ({x:Math.random()*w, y:Math.random()*h, vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25})); }
+  function draw(){ x.clearRect(0,0,w,h);
+    for (const p of pts) { if (!still) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1; } }
+    for (let i = 0; i < pts.length; i++) { for (let j = i+1; j < pts.length; j++) { const a = pts[i], b = pts[j], d = Math.hypot(a.x-b.x, a.y-b.y);
+      if (d < 130) { x.strokeStyle = `rgba(47,140,255,${.35*(1-d/130)})`; x.beginPath(); x.moveTo(a.x,a.y); x.lineTo(b.x,b.y); x.stroke(); } }
+      x.fillStyle = 'rgba(120,180,255,.7)'; x.beginPath(); x.arc(pts[i].x, pts[i].y, 1.6, 0, 7); x.fill(); }
+    if (!still) requestAnimationFrame(draw); }
+  size(); draw(); addEventListener('resize', () => { size(); if (still) draw(); });
+})();
+
+// form: saves to Formspree (when FORMSPREE_ID is set) and offers a ready WhatsApp message
+document.getElementById('form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, ok = document.getElementById('ok'), btn = document.getElementById('sendBtn');
+  const v = id => document.getElementById(id).value.trim();
+  const n = v('f-name'), p = v('f-phone'), co = v('f-company'), em = v('f-email'), sol = document.getElementById('f-sol').value, msg = v('f-msg');
+  if (!n || !p) {
+    ok.textContent = isAr() ? 'من فضلك اكتب اسمك ورقم هاتفك حتى نتمكن من التواصل معك.' : 'Please add your name and phone number so we can reach you.';
+    ok.hidden = false; return;
+  }
+  let saved = false;
+  if (FORMSPREE_ID) {
+    btn.disabled = true;
+    try {
+      const r = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method: 'POST', headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+        body: JSON.stringify({name: n, phone: p, company: co, email: em, solution: sol, details: msg, _subject: 'طلب جديد من الموقع - ' + n})
+      });
+      saved = r.ok;
+    } catch (err) {}
+    btn.disabled = false;
+  }
+  const lines = isAr()
+    ? ['طلب معاينة / عرض سعر', 'الاسم: ' + n, co && 'الشركة: ' + co, 'الهاتف: ' + p, em && 'البريد: ' + em, 'الحل المطلوب: ' + sol, msg && 'التفاصيل: ' + msg]
+    : ['Site survey / quote request', 'Name: ' + n, co && 'Company: ' + co, 'Phone: ' + p, em && 'Email: ' + em, 'Solution: ' + sol, msg && 'Details: ' + msg];
+  const t = document.createElement('span');
+  t.textContent = saved
+    ? (isAr() ? `شكرًا يا ${n}، وصلنا طلبك وهنكلمك على ${p} قريب. لو مستعجل ابعته كمان على واتساب:` : `Thanks, ${n}. We got your request and will call you on ${p} soon. In a hurry? Send it on WhatsApp too:`)
+    : (isAr() ? `شكرًا يا ${n}، طلبك جاهز. اضغط الزر لإرساله لنا على واتساب:` : `Thanks, ${n}. Your request is ready. Tap the button to send it to us on WhatsApp:`);
+  const a = document.createElement('a');
+  a.className = 'btn btn-wa'; a.target = '_blank'; a.rel = 'noopener';
+  a.href = WA + '?text=' + encodeURIComponent(lines.filter(Boolean).join('\n'));
+  a.textContent = isAr() ? 'إرسال على واتساب' : 'Send on WhatsApp';
+  ok.replaceChildren(t, a); ok.hidden = false;
+  if (saved) f.reset();
+});
+</script>
+</body>
+</html>
