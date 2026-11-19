@@ -10,11 +10,9 @@
 ## النشر
 الموقع بيتنشر من فرع `main`، على GitHub Pages وعلى Cloudflare Pages.
 
-إعدادات Cloudflare Pages (Workers & Pages ← Create ← Pages ← Connect to Git):
-- Repository: `elfateh802/Core-Vision-Technologies`
-- Production branch: `main`
-- Framework preset: `None`
-- Build command: فاضي
-- Build output directory: `/`
+النشر على Cloudflare بيتم من GitHub Actions (`.github/workflows/cloudflare-pages.yml`)، ومشروع Cloudflare اسمه `core-vision`.
+محتاج 2 Secrets في الريبو (Settings ← Secrets and variables ← Actions):
+- `CLOUDFLARE_API_TOKEN`: توكن من Cloudflare بقالب "Edit Cloudflare Workers" أو صلاحية Cloudflare Pages: Edit.
+- `CLOUDFLARE_ACCOUNT_ID`: رقم الحساب من الداشبورد.
 
 أي push على `main` بيتنشر لوحده.
